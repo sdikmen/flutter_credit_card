@@ -363,7 +363,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
       return;
     }
 
-    floatingCardStream.add(event);
+    if (!floatingCardStream.isClosed) floatingCardStream.add(event);
   }
 
   void _toggleSide({
